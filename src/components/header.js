@@ -26,6 +26,13 @@ const Header = () => {
           craftsmanship make. We source the finest meats for the perfect meal.
         </p>
         <a
+          onClick={(e) => {
+            e.preventDefault();
+            const productsSection = document.getElementById("products");
+            if (productsSection) {
+              productsSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
           href="#products"
           className="mt-8 inline-block px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full shadow-lg transition duration-300 transform hover:scale-105"
         >
